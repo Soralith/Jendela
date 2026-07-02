@@ -3,6 +3,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { Components } from 'react-markdown';
+import { Phase1Charts, Phase2Charts } from './chart-renderer';
 
 interface NemesisPackage {
   name: string;
@@ -186,6 +187,9 @@ function Phase1Data({ data }: { data: Record<string, unknown> }) {
           Lihat sumber
         </a>
       )}
+      {r.headers && r.rows && r.rows.length > 0 && (
+        <Phase1Charts headers={r.headers} rows={r.rows} />
+      )}
     </div>
   );
 }
@@ -247,12 +251,14 @@ function Phase2Data({ data }: { data: Record<string, unknown> }) {
                           Budget: Rp {(pkg.budget / 1_000_000).toLocaleString('id-ID')} jt
                         </span>
                       )}
-
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+          )}
+          {region.packages && region.packages.length > 0 && (
+            <Phase2Charts packages={region.packages} regionName={region.name} />
           )}
         </div>
       ))}
