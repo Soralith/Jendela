@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>Analisis satu putaran.</strong><br>
-  Data resmi data.go.id, deteksi kejanggalan via Nemesis, validasi opini publik, dan sintesis AI. 
+  Data resmi data.go.id, deteksi kejanggalan via Nemesis, validasi opini publik, dan sintesis AI.<br>
   https://jendela-indonesia.vercel.app/
 </p>
 
@@ -23,18 +23,17 @@ git clone https://github.com/Soralith/Jendela.git
 cd Jendela
 npm install
 ```
-Kemudian konfigurasi Environment Variables (.env.local):<br>
-
+Kemudian konfigurasi Environment Variables (.env.local):
+```bash
 GEMINI_API_KEY=xxx
+```
 
-Bisa juga menggunakan *multiple* kunci API yang juga sudah memiliki fitur *auto-switch* ketika kunci API sebelumnya terkena requests limit:<br>
+Bisa juga menggunakan *multiple* kunci API yang juga sudah memiliki fitur *auto-switch* ketika kunci API sebelumnya terkena requests limit:
 
+```bash
 GEMINI_API_KEY=xxx
-
 GEMINI_API_KEY_2=xxx
-
 GEMINI_API_KEY_3=xxx
+```
 
 Jalan server pengembangan dengan: npm run dev
-
-Buka http://localhost:3000 di browser untuk melihat aplikasi.
