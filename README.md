@@ -2,14 +2,13 @@
   <img src="images/Jendela.png" alt="JendelaAI Logo" width="100%">
 </p>
 
-<h1 align="center">Jendela AI</h1>
-
 <p align="center">
   <strong>Analisis satu putaran.</strong><br>
   Data resmi data.go.id, deteksi kejanggalan via Nemesis, validasi opini publik, dan sintesis AI. 
+  https://jendela-indonesia.vercel.app/
 </p>
 
---
+---
 
 ## Apa itu Jendela AI?
 
@@ -20,17 +19,22 @@ Platform ini memecahkan masalah kompleksitas format data mentah (`.csv`/`.xlsx`)
 ## Local Development
 
 ```bash
-git clone [https://github.com/Soralith/Jendela.git](https://github.com/Soralith/Jendela.git)
+git clone https://github.com/Soralith/Jendela.git
 cd Jendela
 npm install
 ```
-Kemudian konfigurasi Environment Variables (.env.local):
+Kemudian konfigurasi Environment Variables (.env.local):<br>
+
 GEMINI_API_KEY=xxx
 
-Bisa juga menggunakan *multiple* kunci API yang juga sudah memiliki fitur *auto-switch* ketika kunci API sebelumnya terkena requests limit:
+Bisa juga menggunakan *multiple* kunci API yang juga sudah memiliki fitur *auto-switch* ketika kunci API sebelumnya terkena requests limit:<br>
+
 GEMINI_API_KEY=xxx
+
 GEMINI_API_KEY_2=xxx
+
 GEMINI_API_KEY_3=xxx
 
 Jalan server pengembangan dengan: npm run dev
+
 Buka http://localhost:3000 di browser untuk melihat aplikasi.
